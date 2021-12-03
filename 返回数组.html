@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var arr = [1,2,3,4,5,6,7]
+       var taget = 10;
+       function foo(arr,tag){
+           var ret = [];
+           var res = [];
+           for(var i = 0 ;i<arr.length;i++){
+           for(var j = 0;j<arr.length;j++){
+               if (arr[i]+arr[j]===tag && arr[i]!=arr[j]) {
+                   ret.push([arr[i],arr[j]])
+               }
+           }
+       }
+       for(var i = 0;i<ret.length;i++){
+           if (res.indexOf(ret[i])===-1) {
+               res.push(ret[i])
+           }
+       }
+       return res.slice(0,res.length/2)
+       }
+       console.log(foo(arr,taget));
+   </script> 
+</body>
+</html>
